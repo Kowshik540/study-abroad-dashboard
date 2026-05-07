@@ -1,25 +1,20 @@
-# Study Abroad Frontend Assessment
+# Study Abroad Dashboard
 
-## Tech Stack WHICH I USED
-- Next.js
-- TypeScript
-- Material UI (MUI)
-- Zustand
-- DummyJSON API
+A modern frontend dashboard built using **Next.js, Material UI, Zustand, and DummyJSON API**.
 
 ---
 
-## Features
+## 🚀 Live Features
 
 ### Authentication
 - Login using DummyJSON API
-- Token stored in Zustand + localStorage
-- Protected routes via AuthGuard
+- Zustand stores auth token
+- Protected routes for dashboard
 
 ### Users Module
-- Users list with pagination
-- Search functionality
-- Single user detail page
+- Paginated user list
+- Search users
+- Single user details page
 
 ### Products Module
 - Product grid UI
@@ -29,32 +24,53 @@
 
 ---
 
-## State Management (Zustand)
+## 🧠 Tech Stack
 
-Zustand is used because:
-- Lightweight and fast
-- Minimal boilerplate
-- Built-in async support
-- Better than Redux for small/medium apps
+- Next.js (App Router)
+- TypeScript
+- Material UI (MUI)
+- Zustand (State Management)
+- Axios
+- DummyJSON API
 
 ---
 
-## UI/UX
+## 📦 State Management (Zustand)
+
+Zustand was used because:
+- Lightweight and simple
+- No boilerplate like Redux
+- Built-in async actions
+- Easy global state handling
+
+Used for:
+- Authentication state
+- Users data
+- Products data
+
+---
+
+## 🎨 UI/UX
+
 - Material UI components
-- Responsive design
-- Gradient + modern SaaS-style UI
-- Hover animations and clean layout
+- Gradient background design
+- Glassmorphism login page
+- Responsive layout
+- Card-based dashboard UI
 
 ---
 
-## How to Run
+## 📁 Folder Structure
 
-```bash
-npm install
-npm run dev
+- `/app` → Pages (login, dashboard, users, products)
+- `/components` → Reusable UI components
+- `/store` → Zustand stores
+- `/types` → TypeScript types
 
+---
 
+## 🔐 Login Credentials
 
-# these are the login Credentials
-# username: emilys
-# password: emilyspass
+```txt
+username: emilys
+password: emilyspass
