@@ -13,7 +13,7 @@ export default function ProductDetailPage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const fetchProduct = async () => {
+    const fetchData = async () => {
       try {
         const res = await axios.get(
           `https://dummyjson.com/products/${id}`
@@ -26,22 +26,24 @@ export default function ProductDetailPage() {
       }
     }
 
-    fetchProduct()
+    fetchData()
   }, [id])
 
   if (loading) return <p>Loading...</p>
 
-  if (!product) return <p>Product not found</p>
+  if (!product) return <p>No product found</p>
 
   return (
     <Box sx={{ p: 4 }}>
-      <Button onClick={() => router.back()} variant="contained">
+      <Button variant="contained" onClick={() => router.back()}>
         Back
       </Button>
 
       <Card sx={{ mt: 3, p: 3 }}>
         <Typography variant="h4">{product.title}</Typography>
-        <Typography sx={{ mt: 1 }}>{product.description}</Typography>
+        <Typography sx={{ mt: 1 }}>
+          {product.description}
+        </Typography>
         <Typography sx={{ mt: 2 }}>
           Price: ${product.price}
         </Typography>
